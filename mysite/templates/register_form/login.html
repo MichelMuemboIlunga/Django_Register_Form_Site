@@ -1,0 +1,19 @@
+{% extends 'register_form/base.html' %}
+{% block title %}
+ Login
+{% endblock title%}
+{% block content %}
+    <div class="jumbotron my-auto " style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);">
+     <h1 class="text-center text-white">Sign In</h1>
+      <form action="{% url 'register_form:user_login'%}" method="post" class="form-group col-md-4 col-md-offset-5 align-center ">
+        {% csrf_token %}
+        <label for="username"><b>Username</b></label>
+        <input type="text" name="username">
+
+        <label for="password" ><b>Password</b></label>
+        <input type="password" name="password" ><br><br>
+
+          <button type="submit" class="btn btn-primary" name="" value="login" >login</button>
+      </form>
+    </div>
+{% endblock content %}

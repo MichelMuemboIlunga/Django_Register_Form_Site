@@ -1,0 +1,25 @@
+{% extends "register_form/base.html " %}
+{% load static %}
+
+{% block title %}
+ Register
+{% endblock title %}
+
+{% block content %}
+
+ {% if registered %}
+        <h1 class="text-success">Thank you for registering</h1>
+    {% else %}
+<div class="jumbotron my-auto " style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);">
+
+     <h1 class="text-center text-white"> Sign up!</h1>
+    <form method="post" enctype="multipart/form-data"  class="form-group col-md-4 col-md-offset-5 align-center " >
+        {% csrf_token %}
+       <b>{{user_form.as_p}}
+        {{profile_form.as_p}}</b>
+        <button type="submit" class="btn btn-primary" name="" value="Register">Register</button>
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}

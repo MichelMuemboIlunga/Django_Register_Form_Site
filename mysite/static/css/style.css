@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html,body{
+    font-family: 'Lato', sans-serif;
+
+
+}
+.mybrand{
+    font-size: 25px;
+    font-weight:10px;
+}
+.jumbotron{
+
+  justify-content: center;
+
+}
+
+.blog_posts{
+    width:550px;
+}
+input {
+  width: 300px;
+}
+button{
+    width: 90px;
+    height: 40px;
+}
+.my_class{
+ text-align:center;
+}
+.rounded-circle{
+    float:right;
+}
